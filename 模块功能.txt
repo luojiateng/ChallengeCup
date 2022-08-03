@@ -1,0 +1,44 @@
+系统管理
+    设备管理
+    部门管理
+    用户管理
+    角色管理
+    菜单管理
+    日志管理
+    通知管理
+设备监控
+    设备分布
+    数据监控
+    设备日志
+项目管理
+    设备分布
+    数据监控
+    设备日志
+超级管理员：all
+管理员：
+思路：
+
+表
+pro_
+    虹膜 eye: user_id,eye
+    地区 region： region_id, parent_id, location, level
+    核酸历史 his: user_id,time,region_id
+    行程： travel: user_id,time,region_id
+    一码通：code: user_id,level,update_time
+    异常监控
+mac_
+    设备分布: map:client_id, region_id,location,user_id,remark
+    设备监控：client: client_id,start_time,ip,user_id,status
+    日志监控：log: id,begin,end,manage_id,exception
+sys_
+  用户  user: user_id,user_name,dept_id,password,email,phone,avatar,status,remark
+  角色  role: role_id,role_name,status,remark
+  菜单  menu: menu_id,menu_name,pid,path,status,icon,remark
+  角色菜单对应  role_menu: role_id,menu_id
+  用户角色对应  user_role: user_id,role_id
+  部门表   dept: dept_id,dept_name,status
+  日志     log: user_id,user_name,ip,login_time,logout_time
+  文件     file: id,file_name,type,url,md5,status,remark
+people:
+    个人信息：user_id,people_id,name,sex,address,phone,email,user_id
+location 坐标，

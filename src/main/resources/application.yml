@@ -1,0 +1,58 @@
+#服务器端口设置
+server:
+  port: 8000
+  address: localhost
+#mybatis-plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*.xml
+spring:
+  #数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xsyu?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: abc123
+  # redis 配置
+#  redis:
+#    # 地址
+#    host: localhost
+#    # 端口，默认为6379
+#    port: 6379
+#    # 密码
+#    password: abc123
+#    # 连接超时时间
+#    timeout: 10s
+#    lettuce:
+#      pool:
+#        # 连接池中的最小空闲连接
+#        min-idle: 0
+#        # 连接池中的最大空闲连接
+#        max-idle: 8
+#        # 连接池的最大数据库连接数
+#        max-active: 8
+#        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+#        max-wait: -1ms
+#日志配置
+logging:
+  pattern:
+    #日志格式
+    console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) - %clr([%t]){faint} %X{log_id} %clr(%logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    com.tongxin.project: debug
+    io.netty.handler.logging.LoggingHandler: debug
+
+
+#netty配置
+netty:
+  port: 10001
+  inetHost: 0.0.0.0
+  NioThreads:
+    boss: 1
+    worker: 128
+#编解码器设置
+codec:
+  magic: XSYU
+  version: 1
+
