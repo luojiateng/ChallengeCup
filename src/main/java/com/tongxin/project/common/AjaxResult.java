@@ -27,8 +27,8 @@ public class AjaxResult {
      * @param data
      * @return
      */
-    public static AjaxResult success(Object data) {
-        return new AjaxResult(Constant.HTTP_200, "", data);
+    public static AjaxResult success(String codeStatus, Object data) {
+        return new AjaxResult(codeStatus, "success", data);
     }
 
     /**
@@ -37,25 +37,24 @@ public class AjaxResult {
      * @return
      */
     public static AjaxResult success() {
-        return new AjaxResult(Constant.HTTP_200, "请求成功", null);
+        return new AjaxResult(Constant.HTTP_200, "success", null);
     }
 
     /**
      * 自定义错误
      *
-     * @param code
+     * @param codeStatus
      * @param msg
      * @return
      */
-    public static AjaxResult error(String code, String msg) {
-
-        return new AjaxResult(code, msg, null);
+    public static AjaxResult error(String codeStatus, String msg) {
+        return new AjaxResult(codeStatus, msg, null);
     }
 
     /**
      * 默认错误
      */
     public static AjaxResult error() {
-        return new AjaxResult(Constant.HTTP_500, "系统错误", null);
+        return new AjaxResult(Constant.HTTP_500, "error", null);
     }
 }

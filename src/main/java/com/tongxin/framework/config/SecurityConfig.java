@@ -1,6 +1,6 @@
 package com.tongxin.framework.config;
 
-import com.tongxin.common.filter.JwtAuthenticationTokenFilter;
+import com.tongxin.project.system.filter.JwtAuthenticationTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

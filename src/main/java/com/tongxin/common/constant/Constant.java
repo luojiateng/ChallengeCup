@@ -14,13 +14,29 @@ public class Constant {
      */
     public static final String HTTP_200 = "200";
     /**
-     * 参数错误
+     * 修改成功
+     */
+    public static final String HTTP_201 = "201";
+    /**
+     * 请求重定向
+     */
+    public static final String HTTP_301 = "301";
+    /**
+     * 临时重定向
+     */
+    public static final String HTTP_302 = "302";
+    /**
+     * 客户端错误
      */
     public static final String HTTP_400 = "400";
     /**
-     * 权限错误
+     * 缺少token
      */
     public static final String HTTP_401 = "401";
+    /**
+     * 用户名和密码错误
+     */
+    public static final String HTTP_403 = "403";
     /**
      * 资源访问失败
      */
@@ -32,9 +48,5 @@ public class Constant {
     /**
      * 业务异常
      */
-    public static final String HTTP_600 = "600";
-    /**
-     * 用户名和密码错误
-     */
-    public static final String HTTP_999 = "999";
+    public static final String HTTP_501 = "501";
 }
