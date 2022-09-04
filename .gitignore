@@ -3,6 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/xsyu-vue/node_modules/
+/xsyu-vue/dist/
 
 ### STS ###
 .apt_generated
