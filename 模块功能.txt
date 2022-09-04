@@ -42,3 +42,16 @@ sys_
 people:
     个人信息：user_id,people_id,name,sex,address,phone,email,user_id
 location 坐标，
+
+
+plan:
+    DB:
+        1、修改表的结构
+    system：
+        1、完成身份验证
+        2、异常处理
+        -- 3、基本entity、dto开发
+    netty：
+        1、序列化方式实现
+        2、RequestResult完善
+        3、业务处理
